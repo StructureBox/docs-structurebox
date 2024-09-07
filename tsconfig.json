@@ -1,14 +1,7 @@
 {
+  // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
-    "lib": ["ES2021", "DOM"],
-    "typeRoots": [
-      "./types",
-      "./node_modules/@types",
-      "./node_modules/@docusaurus",
-      "./node_modules/@docusaurus/types"
-    ]
-  },
-  "include": ["src/**/*", "docs/**/*"]
+    "baseUrl": "."
+  }
 }
