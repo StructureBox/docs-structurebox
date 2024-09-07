@@ -1,6 +1,6 @@
-import { themes as prismThemes } from "prism-react-renderer"
-import type { Config } from "@docusaurus/types"
-import type * as Preset from "@docusaurus/preset-classic"
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "StructureBox Documents",
@@ -74,10 +74,22 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          type: "doc",
+          docId: "structure/intro",
           position: "left",
-          label: "Docs",
+          label: "Structure", // Structureページへのリンク
+        },
+        {
+          type: "doc",
+          docId: "program/intro",
+          position: "left",
+          label: "Program", // Programページへのリンク
+        },
+        {
+          type: "doc",
+          docId: "business/intro",
+          position: "left",
+          label: "Business",
         },
         { to: "/blog", label: "Blog", position: "left" },
       ],
@@ -133,6 +145,6 @@ const config: Config = {
       darkTheme: prismThemes.vscDarkPlus,
     },
   } satisfies Preset.ThemeConfig,
-}
+};
 
-export default config
+export default config;
