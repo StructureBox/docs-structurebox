@@ -10,12 +10,13 @@ const config: Config = {
   url: "https://structurebox.tech",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/docs-structurebox",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "structurebox", // Usually your GitHub org/user name.
-  projectName: "structurebox", // Usually your repo name.
+  projectName: "docs-structurebox",
+  trailingSlash: false, // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
