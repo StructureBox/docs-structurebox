@@ -14,7 +14,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "structurebox", // Usually your GitHub org/user name.
+  organizationName: "StructureBox", // Usually your GitHub org/user name.
   projectName: "docs-structurebox",
   trailingSlash: false, // Usually your repo name.
 
