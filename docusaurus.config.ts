@@ -7,15 +7,15 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://structurebox.github.io",
+  url: "https://structurebox.tech",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/docs-structurebox",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "structurebox", // Usually your GitHub org/user name.
-  projectName: "structurebox.github.io",
+  projectName: "docs-structurebox",
   trailingSlash: false, // Usually your repo name.
 
   onBrokenLinks: "throw",
