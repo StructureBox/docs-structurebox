@@ -8,7 +8,8 @@ const sidebars: SidebarsConfig = {
       label: "構造計算API",
       link: {
         type: "generated-index",
-        description: "5 minutes to learn the most important Docusaurus concepts.",
+        description: "構造設計プログラム開発者向けAPIの仕様詳細について記載しています。",
+        slug: '/api/toc',
       },
       items: [
         "api/intro",
@@ -18,24 +19,26 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "構造設計",
+      link: {
+        type: "generated-index",
+        description: "構造設計の実務に関わる設計資料を記載しています。",
+        slug: '/structure/toc',
+      },
       items: [
         "structure/intro"
       ],
-      link: {
-        type: "generated-index",
-        description: "5 minutes to learn the most important Docusaurus concepts.",
-      },
     },
     {
       type: "category",
       label: "プログラム",
+      link: {
+        type: "generated-index",
+        description: "構造設計者がプログラミングで学んだTipsを記載しています。",
+        slug: '/program/toc',
+      },
       items: [
         "program/intro"
       ],
-      link: {
-        type: "generated-index",
-        description: "5 minutes to learn the most important Docusaurus concepts.",
-      },
     },
   ],
 };

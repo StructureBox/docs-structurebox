@@ -146,7 +146,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} StructureBox`,
+      copyright: `Copyright © ${new Date().getFullYear()} ストラボ | StructureBox`,
     },
     prism: {
       theme: prismThemes.vscDarkPlus,
