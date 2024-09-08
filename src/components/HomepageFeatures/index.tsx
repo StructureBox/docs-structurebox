@@ -1,9 +1,9 @@
 import clsx from "clsx"
 import Heading from "@theme/Heading"
 import styles from "./styles.module.css"
-import aboutFeatureBook from "@site/static/img/about_feature_book.svg"
-import aboutFeatureWrite from "@site/static/img/about_feature_write.svg"
-import aboutFeatureSyueki from "@site/static/img/about_feature_syueki.svg"
+import documentFeatureAPI from "@site/static/img/document_feature_api.svg"
+import documentFeatureStructure from "@site/static/img/document_feature_structure.svg"
+import documentFeatureProgram from "@site/static/img/document_feature_program.svg"
 
 type FeatureItem = {
   title: string
@@ -13,19 +13,30 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "構造設計とTips",
-    Svg: aboutFeatureBook,
-    description: <>構造設計に関わるちょっとしたTipsをご紹介します。</>,
+    title: "構造計算API",
+    Svg: documentFeatureAPI,
+    description: <>
+    構造計算APIのドキュメントをご紹介します。<br />
+    構造計算APIを利用することで簡単に構造計算を<br />
+    ご自身のエクセルなどに組み込むことができます。
+    </>,
   },
   {
-    title: "構造設計と設計資料",
-    Svg: aboutFeatureWrite,
-    description: <>構造設計の実務で利用する設計資料を共有します。</>,
+    title: "構造設計資料",
+    Svg: documentFeatureStructure,
+    description: <>
+    構造設計の実務で利用する設計資料を共有します。<br />
+    PCやスマホ、タブレットで資料を素早く閲覧頂けます。
+    </>,
   },
   {
-    title: "構造設計とお金",
-    Svg: aboutFeatureSyueki,
-    description: <>構造設計とお金のことに関して共有します。</>,
+    title: "プログラムTips",
+    Svg: documentFeatureProgram,
+    description: <>
+    プログラムに関するTipsを共有します。<br />
+    プログラミングを建築にどのように活用できるか<br />
+    情報交換できると嬉しいです。
+    </>,
   },
 ]
 

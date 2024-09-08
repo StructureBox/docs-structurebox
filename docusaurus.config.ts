@@ -34,19 +34,18 @@ const config: Config = {
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          path: 'products',
+          routeBasePath: 'products',
+          sidebarPath: './sidebars.ts',
         },
         blog: {
+          path: 'notice',
+          routeBasePath: 'notice',
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "warn",
@@ -75,43 +74,52 @@ const config: Config = {
       items: [
         {
           type: "doc",
+          docId: "api/intro",
+          position: "left",
+          label: "構造計算API",
+        },
+        {
+          type: "doc",
           docId: "structure/intro",
           position: "left",
-          label: "Structure", // Structureページへのリンク
+          label: "構造設計",
         },
         {
           type: "doc",
           docId: "program/intro",
           position: "left",
-          label: "Program", // Programページへのリンク
+          label: "プログラム",
         },
-        {
-          type: "doc",
-          docId: "business/intro",
-          position: "left",
-          label: "Business",
-        },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/notice", label: "お知らせ", position: "left" },
       ],
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Document",
+          title: "Documents",
           items: [
             {
-              label: "Docs",
-              to: "/docs/intro",
+              label: "構造計算API",
+              to: "/products/api/intro",
             },
+            {
+              label: "構造設計",
+              to: "/products/structure/intro",
+            },
+            {
+              label: "プログラム",
+              to: "/products/program/intro",
+            },
+            
           ],
         },
         {
-          title: "Media",
+          title: "Notice",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: "お知らせ",
+              to: "/notice",
             },
           ],
         },
@@ -119,7 +127,7 @@ const config: Config = {
           title: "SNS",
           items: [
             {
-              label: "X (旧twitter)",
+              label: "X",
               href: "https://x.com/StructureBOX",
             },
           ],
@@ -143,6 +151,9 @@ const config: Config = {
     prism: {
       theme: prismThemes.vscDarkPlus,
       darkTheme: prismThemes.vscDarkPlus,
+    },
+    customFields: {
+      apiBaseUrl: 'https://api.structurebox.tech/v1',
     },
   } satisfies Preset.ThemeConfig,
 };

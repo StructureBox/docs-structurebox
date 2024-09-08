@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/products/intro"
           >
             ドキュメントを読む
           </Link>
@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Home`}
-      description="Description will go into a meta tag in <head />"
+      description="StructureBoxのプロダクトに関するドキュメントです。"
     >
       <HomepageHeader />
       <main>
