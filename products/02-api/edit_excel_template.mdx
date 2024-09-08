@@ -1,0 +1,101 @@
+---
+title: Excelテンプレートを編集する
+sidebar_label: 【POST】 Excelテンプレートを編集する
+description: Excelテンプレートを編集するエンドポイント( /edit/{template_name} )を説明します。
+keywords:
+  - Excel
+  - テンプレート編集
+  - Supabase
+---
+
+import { Highlight } from '@site/src/components/Highlight';
+
+# Excelテンプレートを編集する
+
+<Highlight color="#1877F2">POST</Highlight> `https://api.structurebox.tech/v1/edit/{template_name}`
+
+<br />
+
+**このエンドポイントは、指定されたExcelテンプレートを編集し、編集されたファイルをSupabaseにアップロードして、そのダウンロードリンクを返します。**
+
+:::tip[概要]
+
+- このエンドポイントは、指定された `template_name` に応じてExcelテンプレートを取得し、受け取ったデータを埋め込んでテンプレートを編集します。
+- 編集されたExcelファイルはSupabaseにアップロードされ、そのダウンロードリンクが返されます。
+- **パスパラメータ**: `template_name` は編集するテンプレートの名前を指定します。
+- **ボディパラメータ**: 編集に必要なデータを辞書形式で送信します。
+
+:::
+
+### パスパラメータ
+
+| パラメータ       | 型     | 説明                              |
+| --------------- | ------ | --------------------------------- |
+| `template_name` | `str`   | 編集するテンプレートの名前を指定します。例: `safety_certificate`, `invoice_template` |
+
+---
+
+### ボディパラメータ
+
+- **説明**: テンプレート編集に必要なデータを辞書形式で送信します。送信する内容はテンプレートに依存します。
+- テンプレートごとに異なるパラメータを送信します。
+
+#### 例: `safety_certificate` テンプレート
+
+```json
+{
+  "architect_number": "12345",
+  "architect_name": "John Doe",
+  "office_number": "67890",
+  "address": "123 Main St",
+  "phone_number": "555-1234",
+  "client_name": "Client Name",
+  "building_location": "Building Location",
+  "building_name": "Building Name",
+  "building_usage": "Commercial",
+  "building_area": 1000.0,
+  "total_area": 5000.0,
+  "max_height": 50.0,
+  "eaves_height": 45.0,
+  "above_ground_floors": 5,
+  "underground_floors": 1,
+  "structure_type": "Steel"
+}
+```
+
+---
+
+### レスポンス形式
+
+- **説明**: Supabaseにアップロードされた編集後のExcelファイルのダウンロードリンクが返されます。
+
+| フィールド               | 型       | 説明                                          |
+| ----------------------- | -------- | --------------------------------------------- |
+| `excel_download_url`     | `string` | Supabaseにアップロードされたファイルのダウンロードリンク。 |
+
+### **レスポンス例**
+```json
+{
+  "excel_download_url": "https://supabase.storage/v1/object/public/edited-files/safety_certificate_20230908.xlsx"
+}
+```
+
+---
+
+## エラーレスポンス
+
+| ステータスコード       | 説明                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| `404 Not Found`      | 指定されたテンプレートが存在しない場合。                                                           |
+| `400 Bad Request`    | 入力データの形式が正しくないか、不足している場合。                                                   |
+| `500 Internal Error` | Supabaseへのファイルアップロードが失敗した場合。                                                     |
+
+---
+
+## エンドポイントの使用方法
+
+このエンドポイントは、さまざまなテンプレートの編集に使用されます。編集されたExcelファイルはSupabaseにアップロードされ、そのダウンロードリンクがレスポンスとして返されます。テンプレート名ごとに異なるデータを送信する必要があり、ボディパラメータの構造はテンプレートに依存します。
+
+:::tip[関連ドキュメント]
+- Supabaseのファイルアップロードについては [Supabase Documentation](https://supabase.io/docs/guides/storage) を参照してください。
+:::

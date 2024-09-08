@@ -1,0 +1,45 @@
+---
+title: はじめに
+sidebar_label: はじめに
+description: 構造計算APIについてご紹介します。
+keywords:
+  - API
+  - 構造計算
+  - 構造設計
+---
+
+import { Highlight } from '@site/src/components/Highlight';
+
+# はじめに
+
+---
+
+## API概要
+
+:::tip[Base_URI]
+
+- このAPIの**BaseURI**は **< `https://api.structurebox.tech/v1` >** になります。
+
+:::
+
+<br />
+
+**StructureBox API** は、建築や構造計算に関連するデータ処理、テンプレート編集、数値計算をサポートするAPIです。<br />
+
+RESTfulなエンドポイントを通じて、Excelテンプレートの自動編集、構造計算などの機能を提供しています。<br />
+
+APIは v1 バージョンとして提供され、様々な機能を複数のルーティングモジュールで管理しています。<br />
+
+---
+
+## リクエスト
+
+StructureBox APIのエンドポイントへは、必ず**https**で接続する必要があります。(httpではエラーになります)<br />
+
+---
+
+## レスポンス
+
+レスポンスはJSON形式となります。<br />
+
+成功や失敗などを表すステータスコードはJSONデータには含まれておらず、成否判定にはHTTPレスポンスヘッダを利用してください。<br />

@@ -14,6 +14,7 @@ const sidebars: SidebarsConfig = {
       items: [
         "api/intro",
         "api/culc_cmq",
+        "api/edit_excel_template",
       ],
     },
     {
