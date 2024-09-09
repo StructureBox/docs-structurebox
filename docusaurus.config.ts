@@ -101,15 +101,15 @@ const config: Config = {
           items: [
             {
               label: "構造計算API",
-              to: "/products/api/intro",
+              to: "/drawing/api/intro",
             },
             {
               label: "構造設計",
-              to: "/products/structure/intro",
+              to: "/drawing/structure/intro",
             },
             {
               label: "プログラム",
-              to: "/products/program/intro",
+              to: "/drawing/program/intro",
             },
             
           ],
