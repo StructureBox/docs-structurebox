@@ -22,20 +22,21 @@ const FeatureList: FeatureItem[] = [
     </>,
   },
   {
-    title: "構造設計資料",
+    title: "構造計算書Tips",
     Svg: documentFeatureStructure,
     description: <>
-    構造設計の実務で利用する設計資料を共有します。<br />
-    PCやスマホ、タブレットで資料を素早く閲覧頂けます。
+    構造計算書作成のためのTipsを共有します。<br />
+    構造設計の実務で利用する設計資料などを<br />
+    PCやスマホで素早く閲覧頂けます。(不定期更新)
     </>,
   },
   {
-    title: "プログラムTips",
+    title: "構造図Tips",
     Svg: documentFeatureProgram,
     description: <>
-    プログラムに関するTipsを共有します。<br />
-    プログラミングを建築にどのように活用できるか<br />
-    情報交換できると嬉しいです。
+    構造図作図のためのTipsを共有します。<br />
+    構造図を実務で作成する際のフォーマット資料や<br />
+    標準図などをご利用いただけます。(不定期更新)
     </>,
   },
 ]

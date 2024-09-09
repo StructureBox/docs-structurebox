@@ -19,10 +19,10 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "構造設計",
+      label: "構造計算",
       link: {
         type: "generated-index",
-        description: "構造設計の実務に関わる設計資料を記載しています。",
+        description: "構造計算の実務に役立つ資料を記載しています。",
         slug: '/structure/toc',
       },
       items: [
@@ -31,14 +31,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "プログラム",
+      label: "構造図",
       link: {
         type: "generated-index",
-        description: "構造設計者がプログラミングで学んだTipsを記載しています。",
-        slug: '/program/toc',
+        description: "構造図作図の実務に役立つ資料を記載しています。",
+        slug: '/drawing/toc',
       },
       items: [
-        "program/intro"
+        "drawing/intro"
       ],
     },
   ],
