@@ -1,7 +1,7 @@
 ---
 title: Excelテンプレートを編集する
 sidebar_label: 【POST】 Excelテンプレートを編集する
-description: Excelテンプレートを編集するエンドポイント( /edit/{template_name} )を説明します。
+description: Excelテンプレートを編集するエンドポイント( excel/edit/{template_name} )を説明します。
 keywords:
   - Excel
   - テンプレート編集
@@ -12,7 +12,7 @@ import { Highlight } from '@site/src/components/Highlight';
 
 # Excelテンプレートを編集する
 
-<Highlight color="#1877F2">POST</Highlight> `https://api.structurebox.tech/v1/edit/{template_name}`
+<Highlight color="#1877F2">POST</Highlight> `https://api.structurebox.tech/v1/excel/edit/{template_name}`
 
 <br />
 
@@ -27,7 +27,7 @@ import { Highlight } from '@site/src/components/Highlight';
 
 :::
 
-### パスパラメータ
+## パスパラメータ
 
 | パラメータ       | 型     | 説明                              |
 | --------------- | ------ | --------------------------------- |
@@ -35,12 +35,12 @@ import { Highlight } from '@site/src/components/Highlight';
 
 ---
 
-### ボディパラメータ
+## ボディパラメータ
 
 - **説明**: テンプレート編集に必要なデータを辞書形式で送信します。送信する内容はテンプレートに依存します。
 - テンプレートごとに異なるパラメータを送信します。
 
-#### 例: `safety_certificate` テンプレート
+### 例: `safety_certificate` テンプレート
 
 ```json
 {
@@ -65,7 +65,7 @@ import { Highlight } from '@site/src/components/Highlight';
 
 ---
 
-### レスポンス形式
+## レスポンス形式
 
 - **説明**: Supabaseにアップロードされた編集後のExcelファイルのダウンロードリンクが返されます。
 
@@ -73,7 +73,7 @@ import { Highlight } from '@site/src/components/Highlight';
 | ----------------------- | -------- | --------------------------------------------- |
 | `excel_download_url`     | `string` | Supabaseにアップロードされたファイルのダウンロードリンク。 |
 
-### **レスポンス例**
+### レスポンス例
 ```json
 {
   "excel_download_url": "https://supabase.storage/v1/object/public/edited-files/safety_certificate_20230908.xlsx"

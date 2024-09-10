@@ -13,8 +13,46 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         "api/intro",
-        "api/culc_cmq",
-        "api/edit_excel_template",
+        {
+          type: "category",
+          label: "構造力学API",
+          link: {
+            type: "generated-index",
+            description: "構造力学計算に基づくエンドポイントをまとめたセクションです。",
+            slug: '/api/general/toc',
+          },
+          items: [
+            "api/general/culc_cmq",
+          ],
+        },
+        {
+          type: "category",
+          label: "エクセルAPI",
+          link: {
+            type: "generated-index",
+            description: "エクセル計算資料に関するエンドポイントをまとめたセクションです。",
+            slug: '/structure/excel/toc',
+          },
+          items: [
+            "api/excel/edit_excel_template",
+          ],
+        },
+        {
+          type: "category",
+          label: "鉄骨造API",
+          link: {
+            type: "generated-index",
+            description: "鉄骨造に関するエンドポイントをまとめたセクションです。",
+            slug: '/api/steel/toc',
+          },
+          items: [
+            "api/steel/steel_h_postsection",
+            "api/steel/steel_wc_postsection",
+            "api/steel/steel_lc_postsection",
+            "api/steel/steel_box_postsection",
+            "api/steel/steel_pipe_postsection",
+          ],
+        },
       ],
     },
     {
@@ -26,7 +64,19 @@ const sidebars: SidebarsConfig = {
         slug: '/structure/toc',
       },
       items: [
-        "structure/intro"
+        "structure/intro",
+        {
+          type: "category",
+          label: "鉄骨造",
+          link: {
+            type: "generated-index",
+            description: "鉄骨造に関する情報をまとめたセクションです。",
+            slug: '/structure/steel/toc',
+          },
+          items: [
+            "structure/steel/intro", // steelカテゴリー内のドキュメント
+          ],
+        },
       ],
     },
     {
