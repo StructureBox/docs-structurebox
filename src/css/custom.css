@@ -31,6 +31,10 @@
   border-bottom: 1px solid var(--ifm-color-primary-lightest); /* アンダーラインの色と太さ */
 }
 
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-lightest);
+}
+
 .navbar__icon {
   height: 2rem;
   width: 2rem;
@@ -51,3 +55,4 @@
 .navbar__github:hover {
   background-color: var(--ifm-color-primary-lightest);
 }
+
