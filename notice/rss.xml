@@ -4,15 +4,15 @@
         <title>StructureBox Documents Blog</title>
         <link>https://structurebox.tech/notice</link>
         <description>StructureBox Documents Blog</description>
-        <lastBuildDate>Tue, 17 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
         <item>
-            <title><![CDATA[構造計算APIドキュメントをリリースしました(2024-09-17)]]></title>
+            <title><![CDATA[構造計算APIドキュメントをリリースしました(2024-09-16)]]></title>
             <link>https://structurebox.tech/notice/log/api_release</link>
             <guid>https://structurebox.tech/notice/log/api_release</guid>
-            <pubDate>Tue, 17 Sep 2024 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 16 Sep 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[構造計算APIをリリースしました。]]></description>
             <content:encoded><![CDATA[<p>構造計算APIをリリースしました。</p>]]></content:encoded>
             <category>API</category>
