@@ -1,10 +1,3 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #385277;
   --ifm-color-primary-dark: #324a6b;
@@ -27,4 +20,34 @@
   --ifm-color-primary-lighter: #e6edf3;
   --ifm-color-primary-lightest: #d1dbe5;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.footer__title {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem; /* アンダーラインとテキストの間のスペース */
+  border-bottom: 1px solid var(--ifm-color-primary-lightest); /* アンダーラインの色と太さ */
+}
+
+.navbar__icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.navbar__github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: background-color 0.3s ease, mask 0.3s ease;
+  /* マスクを使ってGitHubアイコンを表示 */
+  mask: url('/img/github-icon.svg') no-repeat 50% 50%;
+  mask-size: contain;
+  background-color: #262b36; 
+}
+
+.navbar__github:hover {
+  background-color: var(--ifm-color-primary-lightest);
 }

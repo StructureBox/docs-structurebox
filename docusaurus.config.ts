@@ -73,24 +73,17 @@ const config: Config = {
       },
       items: [
         {
-          type: "doc",
-          docId: "api/intro",
+          type: "docSidebar",
+          sidebarId: "products",
           position: "left",
-          label: "構造計算API",
-        },
-        {
-          type: "doc",
-          docId: "structure/intro",
-          position: "left",
-          label: "構造計算",
-        },
-        {
-          type: "doc",
-          docId: "drawing/intro",
-          position: "left",
-          label: "構造図",
+          label: "ドキュメント",
         },
         { to: "/notice", label: "お知らせ", position: "left" },
+        {
+          href: 'https://github.com/StructureBox/docs-structurebox',
+          position: 'right',
+          className: 'navbar__icon navbar__github',
+        },
       ],
     },
     footer: {
@@ -101,17 +94,16 @@ const config: Config = {
           items: [
             {
               label: "構造計算API",
-              to: "/products/api/intro",
+              to: "/products/api/toc",
             },
             {
-              label: "構造計算",
-              to: "/products/structure/intro",
+              label: "構造計算書",
+              to: "/products/sheet/toc",
             },
             {
               label: "構造図",
-              to: "/products/drawing/intro",
+              to: "/products/drawing/toc",
             },
-            
           ],
         },
         {
@@ -120,15 +112,6 @@ const config: Config = {
             {
               label: "お知らせ",
               to: "/notice",
-            },
-          ],
-        },
-        {
-          title: "SNS",
-          items: [
-            {
-              label: "X",
-              href: "https://x.com/StructureBOX",
             },
           ],
         },

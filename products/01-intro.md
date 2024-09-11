@@ -1,47 +1,95 @@
 ---
+title: はじめに
+sidebar_label: はじめに
+description: StructureBox APIの概要と利用方法を説明します。
+keywords:
+  - StructureBox
+  - API
+  - 構造計算
+  - 構造設計
+  - 構造計算書
+  - 構造図
+  - 建築
+---
+
+import { Highlight } from '@site/src/components/Highlight';
+
+# はじめに
+
+StructureBox APIは、建築構造に関連するさまざまな計算を行うためのAPIです。このドキュメントでは、APIの基本的な使い方やミドルウェア設定について説明します。
+
+<Highlight color="#1877F2">BaseURI</Highlight> `https://api.structurebox.tech/v1`
+
+<br />
+
+:::tip[概要]
+
+StructureBox APIは、建築構造の計算やデータ処理を行うために設計されています。ユーザーはAPIを通じて、Excelのテンプレート編集やRC、鋼鉄に関する計算を行うことができます。ドキュメントでは、APIのエンドポイントや各種ミドルウェア設定について説明します。
+
+:::
+
+## 公開されているエンドポイント
+
+StructureBox APIには複数のエンドポイントがありますが、現在公開されているのは以下のエンドポイントです。
+
+:::note[無料公開エンドポイント]
+
+<br />
+<Highlight color="#1877F2">GET</Highlight> `https://api.structurebox.tech/v1/free`  
+
+:::
+
+無料で利用可能なエンドポイントです。このエンドポイントは、オープンソース関連のデータ取得や処理に利用されます。
 
 ---
 
-# サイトマップ
+## 利用制限について
 
-Let's discover **Docusaurus in less than 5 minutes**.
+StructureBox APIは、APIの効率的かつ安全な運用を実現しています。以下に、APIで使用されている利用制限について説明します。
 
-## Getting Started
+### 回数制限（レートリミット）
 
-Get started by **creating a new site**.
+リクエストが過剰に行われると、サーバーに負荷がかかり、他のユーザーに影響が及ぶ可能性があります。そのため、StructureBox APIではレートリミット（利用回数制限）を設定しています。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+#### レートリミット設定
 
-### What you'll need
+- **許可される最大リクエスト数**: 1分間に10リクエストまで
+- **制限対象**: クライアントのIPアドレスごとにカウントされます。
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+もしリクエスト回数が制限を超えた場合、制限超過のエラーレスポンスが返されます。
 
-## Generate a new site
+#### レスポンスコード
+| ステータスコード | 説明                              |
+| ---------------- | --------------------------------- |
+| `429`            | リクエスト回数の制限を超えた場合に返されます。 |
 
-Generate a new Docusaurus site using the **classic template**.
+---
 
-The classic template will automatically be added to your project after you run the command:
+### エラーハンドリング
 
-```bash
-npm init docusaurus@latest my-website classic
+APIのエラーハンドリングを適切に行うため、エラーハンドリングミドルウェアが導入されています。このミドルウェアは、バリデーションエラーやサーバーエラーが発生した際に、わかりやすいエラーメッセージを返します。
+
+#### 代表的なエラーレスポンス
+
+バリデーションエラーやサーバーエラーが発生した場合、適切なエラーメッセージが返されます。
+
+```json
+{
+  "detail": "入力データが無効です。正しい形式で入力してください。",
+  "errors": ["エラーの詳細"]
+}
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+---
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## APIの基本的な利用方法
 
-## Start your site
+StructureBox APIは、建築構造に関する様々な計算やテンプレート編集機能を提供しています。詳細なAPIの使い方については、各エンドポイントのドキュメントを参照してください。
 
-Run the development server:
+APIにアクセスする際には、各エンドポイントへの適切なパスとリクエスト方法を確認してください。公開されている `free` エンドポイントについては、追加の認証なしで利用可能です。
 
-```bash
-cd my-website
-npm run start
-```
+---
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## まとめ
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+StructureBox APIは、建築構造に関連する多様な計算機能やテンプレート編集機能を提供します。本ドキュメントでは、APIの基本的な使い方とミドルウェアによる設定について説明しました。詳細な各エンドポイントの仕様については、各エンドポイントごとのドキュメントを参照してください。

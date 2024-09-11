@@ -27,18 +27,6 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "エクセルAPI",
-          link: {
-            type: "generated-index",
-            description: "エクセル計算資料に関するエンドポイントをまとめたセクションです。",
-            slug: '/structure/excel/toc',
-          },
-          items: [
-            "api/excel/edit_excel_template",
-          ],
-        },
-        {
-          type: "category",
           label: "鉄骨造API",
           link: {
             type: "generated-index",
@@ -57,26 +45,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "構造計算",
+      label: "構造計算書",
       link: {
         type: "generated-index",
         description: "構造計算の実務に役立つ資料を記載しています。",
-        slug: '/structure/toc',
+        slug: '/sheet/toc',
       },
       items: [
-        "structure/intro",
-        {
-          type: "category",
-          label: "鉄骨造",
-          link: {
-            type: "generated-index",
-            description: "鉄骨造に関する情報をまとめたセクションです。",
-            slug: '/structure/steel/toc',
-          },
-          items: [
-            "structure/steel/intro", // steelカテゴリー内のドキュメント
-          ],
-        },
+        "sheet/edit_excel_template"
       ],
     },
     {
